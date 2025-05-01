@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoSliderPuzzle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PhotoSliderPuzzle</h1>
+        <div class="game-area">
+            <div id="puzzle"></div>
+            <div class="controls">
+                <div class="stats">
+                    <div id="moves">Moves: 0</div>
+                    <div id="timer">Time: 0s</div>
+                </div>
+                <div class="buttons">
+                    <button id="resetButton">Reset</button>
+                    <button id="newPhotoButton">New Photo</button>
+                    <button id="viewOriginalButton">View Original</button>
+                    <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                </div>
+            </div>
+            <div id="winMessage" class="hidden">
+                <div class="message-content">
+                    <h2>Congratulations!</h2>
+                    <p>You solved the puzzle in <span id="finalMoves">0</span> moves and <span id="finalTime">0</span> seconds!</p>
+                    <button id="closeWinMessage">Close</button>
+                </div>
+            </div>
+            <div id="originalImagePopup" style="display: none;">
+                <div class="message-content">
+                    <h2>Original Image</h2>
+                    <div id="originalImageContainer"></div>
+                    <button id="closeOriginalImage">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="instructions">
+            <h2>How to Play</h2>
+            <ol>
+                <li>Upload a photo using the "New Photo" button</li>
+                <li>Click on tiles adjacent to the empty space to move them one position</li>
+                <li>Click on any tile in the same row or column as the empty space to move all tiles between them</li>
+                <li>Rearrange the tiles to recreate the original image</li>
+                <li>Use the "Reset" button to shuffle the current puzzle</li>
+            </ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
